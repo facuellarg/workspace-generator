@@ -91,11 +91,11 @@ export async function activate(context: vscode.ExtensionContext) {
 
 		// Prompt the user to open the new workspace
 		const open = await vscode.window.showInformationMessage(
-			'Workspace file created. Do you want to open it?',
+			'Workspace file created. Do you want to activate it?',
 			'Yes', 'No'
 		);
 		if (open === 'Yes') {
-			await vscode.commands.executeCommand('vscode.open', workspaceUri);
+			await vscode.commands.executeCommand('vscode.openFolder', workspaceUri, false);
 		}
 
 	});

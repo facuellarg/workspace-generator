@@ -3,6 +3,13 @@
   "displayName": "GoSpace",
   "description": "Add golang project to the workspace",
   "version": "0.0.1",
+  "publisher": "facuellarg",
+  "license": "MIT",
+  "keywords": [
+    "golang",
+    "go",
+    "workspace"
+  ],
   "engines": {
     "vscode": "^1.87.0"
   },

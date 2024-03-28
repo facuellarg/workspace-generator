@@ -1,11 +1,10 @@
 #node 
 node_modules/**/*
-
-
+out
 # vscode
 .vscode/*
 
-
+*.vsix
 # npm
 npm-debug.log
 
