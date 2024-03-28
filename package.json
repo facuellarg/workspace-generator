@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "gospace.helloWorld",
-        "title": "Hello World"
+        "command": "gospace.generate-workspace",
+        "title": "Generate Workspace Golang"
       }
     ]
   },

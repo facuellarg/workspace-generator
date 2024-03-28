@@ -51,7 +51,7 @@ async function activate(context) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with registerCommand
     // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('gospace.helloWorld', async () => {
+    let disposable = vscode.commands.registerCommand('gospace.generate-workspace', async () => {
         // get the current opened folders in the workspace
         const folders = vscode.workspace.workspaceFolders;
         if (folders === undefined || folders.length === 0) {
@@ -111,16 +111,17 @@ async function activate(context) {
 }
 exports.activate = activate;
 async function searchGolangRoots(basepath, files) {
-    for (let i = 0; i < paths_to_exclude.length; i++) {
-        if (basepath.fsPath.includes(paths_to_exclude[i])) {
-            return [];
-        }
-    }
+    // for (let i = 0; i < paths_to_exclude.length; i++) {
+    // 	if (basepath.fsPath.includes(paths_to_exclude[i])) {
+    // 		return [];
+    // 	}
+    // }
     var roots = [];
     for (let i = 0; i < files.length; i++) {
         let file = files[i];
         if (file[1] === vscode.FileType.File) {
             if (file[0] === "go.mod" || file[0] === "main.go") {
+                roots.push(basepath.fsPath);
                 break;
             }
         }

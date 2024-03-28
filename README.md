@@ -1,71 +1,36 @@
-# gospace README
+# Generate Workspace Golang Extension for VSCode
 
-This is the README for your extension "gospace". After writing up a brief description, we recommend including the following sections.
+The "Generate Workspace Golang" extension for Visual Studio Code automates the process of setting up a new workspace tailored specifically for Golang developers. By scanning the current folder for Golang projects, it intelligently adds any detected projects into a single, convenient workspace. This is ideal for developers looking to streamline their setup process and quickly get started with their Golang projects in VSCode.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Automatic Golang Project Detection**: Scans the current folder for signs of Golang projects, specifically looking for `go.mod` files or `main.go` files. This ensures that only relevant Golang projects are added to the workspace.
+- **Workspace Generation**: Generates a new workspace in the current folder, seamlessly integrating all detected Golang projects. This creates an organized environment that's ready for development.
+- **Simplicity**: With just one command, set up your entire Golang development environment in VSCode, avoiding the hassle of manually adding projects to your workspace.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
+1. **Open the Command Palette** in VSCode by pressing `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
+2. **Type and select**: `Generate Workspace Golang`. The extension will start scanning the current folder for Golang projects.
+3. **Wait for the process to complete**. Once done, your new workspace will be ready, with all discovered Golang projects added.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
 
-## Requirements
+You can install the "Generate Workspace Golang" extension directly from the Visual Studio Code Marketplace. Search for "Generate Workspace Golang" in the Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`) and click on the install button.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+## Contributing
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+If you'd like to contribute to the development of "Generate Workspace Golang," please follow the standard GitHub pull request process. If you have any suggestions or encounter any issues, feel free to open an issue on the GitHub repository.
 
-For example:
+## License
 
-This extension contributes the following settings:
+This extension is released under the [MIT License](LICENSE.txt).
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Acknowledgements
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Thank you to all the contributors who have helped in building this extension. Your support and contributions make this project possible.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Enjoy your seamless Golang development experience with "Generate Workspace Golang"!
