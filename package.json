@@ -6,7 +6,8 @@
     "type": "git",
     "url": "https://github.com/facuellarg/workspace-generator"
   },
-  "version": "0.0.1",
+  "icon": "resource/icon.png",
+  "version": "0.0.2",
   "publisher": "facuellarg",
   "license": "MIT",
   "keywords": [
