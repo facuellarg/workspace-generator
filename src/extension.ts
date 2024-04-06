@@ -38,10 +38,16 @@ export async function activate(context: vscode.ExtensionContext) {
 		}
 
 		var roots: Set<string> = new Set();
+		roots.add(folders[0].uri.fsPath);
 		var workspaceUri = vscode.workspace.workspaceFile;
 		var workspaceContent: Uint8Array = new Uint8Array();
 		var workspaceJson: any = {
-			"folders": [],
+			"folders": [
+				{
+					"path": folders[0].uri.fsPath,
+					"name": folders[0].name
+				}
+			],
 		};
 
 		if (workspaceUri !== undefined) {
@@ -62,9 +68,9 @@ export async function activate(context: vscode.ExtensionContext) {
 		for (let i = 0; i < folders.length; i++) {
 			// list all files in the first folder
 			const folder = folders[i];
-			if (roots.has(folder.uri.fsPath)) {
-				continue;
-			}
+			// if (roots.has(folder.uri.fsPath)) {
+			// 	continue;
+			// }
 
 			const files = await vscode.workspace.fs.readDirectory(folder.uri);
 			var current_roots: string[] = [];
@@ -104,11 +110,6 @@ export async function activate(context: vscode.ExtensionContext) {
 }
 
 async function searchGolangRoots(basepath: vscode.Uri, files: [string, vscode.FileType][]): Promise<string[]> {
-	// for (let i = 0; i < paths_to_exclude.length; i++) {
-	// 	if (basepath.fsPath.includes(paths_to_exclude[i])) {
-	// 		return [];
-	// 	}
-	// }
 
 	var roots: string[] = [];
 	for (let i = 0; i < files.length; i++) {

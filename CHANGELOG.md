@@ -7,3 +7,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+
+## 0.0.2
+
+Icon added
+
+## 0.0.3
+
+Add the current open folder to the workspace
